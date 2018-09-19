@@ -19,6 +19,8 @@ Herrejon Alarcon Jeerel Zalatiel
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bookblock.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/default.css"/>
 
 
     <title>Laboratorio OPTISERV</title>
@@ -28,7 +30,7 @@ Herrejon Alarcon Jeerel Zalatiel
 
     <!-- Custom styles for this template -->
     <link href="assets/css/modern-business.css" rel="stylesheet">
-
+    <script src="assets/js/modernizr.custom.js" type="text/javascript" charset="utf-8"></script>
   </head>
 
   <body>
@@ -79,43 +81,29 @@ Herrejon Alarcon Jeerel Zalatiel
     </header>
       
     <!-- Page Content -->
-
      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <!--<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>-->
+          <!--<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
         </ol>
         <div class="carousel-inner" role="listbox">
-          <!-- Slide One - Set the background image for this slide in the line below -->
+          
           <div class="carousel-item active" style="background-image: url('img/main_header_1.jpg')">
             <div class="carousel-caption d-none d-md-block">
             </div>
           </div>
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Second Slide</h3>
-              <p>This is a description for the second slide.</p>
-            </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Third Slide</h3>
-              <p>This is a description for the third slide.</p>
-            </div>
-          </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </a>
+        </a>-->
     </div>
+    
 
     <div class="container">
 
@@ -125,20 +113,41 @@ Herrejon Alarcon Jeerel Zalatiel
       <div class="row">
         <div class="col-lg-6">
           <h2>Laboratorio de Optimización en Empresas de Servicio</h2>
-          <p>The Modern Business template by Start Bootstrap includes:</p>
+          <p>Los servicios juegan un papel importante en la economía de una sociedad. </p>
+    <p>El transporte, infraestructura y los gubernamentales son los principales servicios de una sociedad avanzada.</p>
+    <p>La naturaleza del sector servicios, se explora en términos de:</p>
           <ul>
             <li>
-              <strong>Bootstrap v4</strong>
+              <strong>Oportunidades de empleos</strong>
             </li>
-            <li>jQuery</li>
-            <li>Font Awesome</li>
-            <li>Working contact form with validation</li>
-            <li>Unstyled page elements for easy customization</li>
+            <li>
+              <strong>Contribuciónes a la estabilidad económica</strong>
+            </li>
+            <li>
+              <strong>Fuentes del liderazgo económico</strong>
+            </li>
           </ul>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+          <p>La industria de servicios mexicana representa:</p>
+          <ul>
+            <li>
+              <strong>87.9%</strong> del total de las empresas
+            </li>
+            <li>
+              <strong>74.8%</strong> del empleo total
+            </li>
+            <li>
+              <strong>62.4%</strong> del PIB nacional
+            </li>
+          </ul>
+          <p>INEGI 2016</p>
         </div>
-        <div class="col-lg-6">
-          <img class="img-fluid rounded" src="img/lab_1.png" alt="">
+        <div class="col-lg-6 block-lab-1">
+          <p>Actualmente se considera la idea de que una nueva economía basada en la experiencia y el conocimiento esta  reemplazando a la sociedad post-industrial.</p>
+          <div id="lab-bookblock" class="lab-bookblock">
+            <div class="bb-item">
+              <iframe width="100%" height="100%" src="https://www.powtoon.com/embed/dyHGraIHero/" frameborder="0"></iframe>
+            </div>
+          </div>
         </div>
       </div>
       <!-- /.row -->
@@ -304,9 +313,16 @@ Herrejon Alarcon Jeerel Zalatiel
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.bookblock.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/js/jquerypp.custom.js" type="text/javascript" charset="utf-8"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+    $(document).on('ready', function() {
+      $("#lab-bookblock").bookblock();
+      });
 
+    </script>
   </body>
 
 </html>
