@@ -816,6 +816,19 @@ section#portfolio img {
     box-shadow: 1px 1px 12px 6px #0000002b;
 }
 
+.parallax1 { 
+    background-image: url(../img/pc_room_1.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 160%;
+    margin: 50px 0 -80px -30% !important;
+    position: relative;
+    display: block;
+}
+
 /*============================================
 * END Custom Area
 *=============================================*/
