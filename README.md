@@ -1,3 +1,0 @@
-# optiserv
-
-Jereel Y Max
