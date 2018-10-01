@@ -712,6 +712,10 @@
 * 8. Custom Area
 *=============================================*/
 
+html {
+    overflow-x: hidden;
+}
+
 div#lab-bookblock {
     height: 250px;
 }
@@ -817,18 +821,51 @@ section#portfolio img {
 }
 
 .parallax1 { 
-    background-image: url(../img/pc_room_1.jpg);
+    background-image: url(../img/fondo_mesa.jpg);
     height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 160%;
-    margin: 50px 0 -80px -30% !important;
+    width: 350%;
+    margin: 50px 0 -80px -100% !important;
     position: relative;
     display: block;
+    overflow-x: hidden;
 }
 
+.mision-paragraph{
+    color: black;
+    background: white;
+    transition:0.5s;
+    font-size: 20px;
+    width: 50%;
+    position: relative;
+    height: auto;
+    bottom: 230px;
+    margin-bottom: -235px;
+    padding: 15px;
+    font-family:Montserrat !important;
+    box-shadow: inset 0px 0px 20px 4px #343a4124;
+    border-radius: 35px;
+
+}
+@media (max-width:900px){
+    .mision-paragraph{
+        width: 100%;
+        background:#343a41;
+        color:white;
+        transition:0.5s;
+        margin-bottom: -130px;
+    }
+
+}
+@media (max-width:515px){
+    .mision-paragraph{
+        margin-bottom: -180px;
+    }
+
+}
 /*============================================
 * END Custom Area
 *=============================================*/
