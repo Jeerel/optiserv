@@ -864,7 +864,16 @@ section#portfolio img {
     .mision-paragraph{
         margin-bottom: -180px;
     }
+}
 
+#carac_Serv h1,#carac_Serv h2, #carac_Serv img{
+    text-align:center;
+    margin:0 auto;
+    display:block;
+}
+
+#carac_Serv p{
+    text-align:justify; 
 }
 /*============================================
 * END Custom Area
