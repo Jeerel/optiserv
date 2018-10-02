@@ -13,7 +13,7 @@
 }
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-/*body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}*/
+body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
@@ -294,18 +294,4 @@ a img {
 		display: none;
 	}
 
-}
-
-div#lab-bookblock {
-    height: 72%;
-}
-@media (max-width:992px){
-	.block-lab-1{
-		display: block;
-	    position: relative;
-	    height: 100%;
-	}
-	div#lab-bookblock {
-    height: 250px;
-}
 }
