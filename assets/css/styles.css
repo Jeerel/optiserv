@@ -1001,3 +1001,6 @@ a.list-group-item {
         position:relative;
     }
 }
+#home-dev .svg_white svg {
+    fill: #f6f6f6;
+}
