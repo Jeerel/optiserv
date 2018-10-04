@@ -875,6 +875,26 @@ section#portfolio img {
 #carac_Serv p{
     text-align:justify; 
 }
+
+@media (max-width:768px){
+    section#contact {
+        text-align: center;
+        list-style: none;
+    }
+    .section-title h2:before,.section-title h2:after{
+        margin:2% 0% 0% 20%;
+        text-align:center;
+    }
+    .prt-grid{
+        margin:0 auto;
+        display:block;
+        text-align:center;
+    }
+    #carac_Serv, .service-area, .service-1{
+        text-align:center;
+        /*list-style:none;*/
+    }
+}
 /*============================================
 * END Custom Area
 *=============================================*/
@@ -1012,6 +1032,9 @@ a.list-group-item {
     fill: #f6f6f6;
 }
 
+.container{
+    height:auto !important;
+}
 
 /*
  *  STYLE 7 SCROLL
