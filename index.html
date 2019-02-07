@@ -21,6 +21,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
     <!-- modernizr css -->
     <script src="./assets/js/modernizr-2.8.3.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
 </head>
 
 <body id="top">
@@ -48,6 +53,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#about">  Acerca de  </a>
+                </li>
+                <li class="nav-item">
+                  <a id="descTest" class="nav-link" href="#"></a>
                 </li>
                 <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -424,6 +432,39 @@
     <script src="./assets/js/scripts.js"></script>
     <script src="./assets/js/jquery.bookblock.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/jquerypp.custom.js" type="text/javascript" charset="utf-8"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCOZZzkJtkGx13YfbAvzq5xc-pXVLnB9kM",
+        authDomain: "optiserv-lab.firebaseapp.com",
+        databaseURL: "https://optiserv-lab.firebaseio.com",
+        projectId: "optiserv-lab",
+        storageBucket: "optiserv-lab.appspot.com",
+        messagingSenderId: "828622975080"
+      };
+      firebase.initializeApp(config);
+
+      var ref = firebase.database().ref('/Descripcion');
+
+      function escribeDesc(text) {
+        ref.set({
+          texto: text
+        });
+      }
+
+      //escribeDesc("Hola a toditos!");
+      escribeDesc("Hola a toditouss!");
+
+      var idTest = $("#descTest");
+      
+      ref.on("value", (snapshot)=> {
+        idTest.text(snapshot.val().texto);
+        idTest.attr("href",snapshot.val().texto);
+        console.log(snapshot.val().texto);
+      })
+
+    </script>
 
     <script>
     $(document).on('ready', function() {
