@@ -17,9 +17,9 @@ function escribeDesc(text,referencia) {
     });
 }
 
-//escribeDesc("Hola a toditouss!",firebase.database().ref('/Descripcion'));
+escribeDesc("Hola a toditouss!",firebase.database().ref('/Descripcion'));
 
-var idTest = $("");
+var idTest = $("#descripcion");
 ref.on("value", (snapshot)=> {
     idTest.text(snapshot.val().texto);
     idTest.attr("href",snapshot.val().texto);
