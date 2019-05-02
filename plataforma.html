@@ -1,26 +1,24 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Plataforma Interactiva OPTISERV</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Plataforma OPTISERV</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- 
-        Rectangle Template 
-        http://www.templatemo.com/preview/templatemo_439_rectangle
-    	-->
-        <link rel="stylesheet" href="platform_resources//platform_resources/css/normalize.css">
+        <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
+        <link rel="stylesheet" href="platform_resources/css/normalize.css">
         <link rel="stylesheet" href="platform_resources/css/font-awesome.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="platform_resources/css/bootstrap.min.css">
         <link rel="stylesheet" href="platform_resources/css/templatemo-style.css">
-        <script src="platform_resources/js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+        <!-- modernizr css -->
+        <script src="./assets/js/modernizr-2.8.3.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-storage.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     </head>
     <body>
@@ -37,11 +35,11 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <img src="./assets/img/logo.png" style="width: 45px;margin-right: 10px;opacity: 0.5;padding: 5px;float:left;">
-                        <a class="navbar-brand" style="color:rgb(255, 255, 255);letter-spacing: 4px;" href="index.html">Plataforma OPTISERV</a>
+                        <a class="navbar-brand" style="color:rgb(255, 255, 255);letter-spacing: 4px;" href="index.html">Laboratorio OPTISERV</a>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="back-icons">
-                            <a href="index.html" ><div class="fa fa-arrow-circle-o-left"></div> Regresar</a>
+                            <a href="index.html" ><div class="fa fa-arrow-circle-left"></div> Regresar</a>
                         </div>
                     </div>
                 </div>
@@ -56,16 +54,16 @@
             <div class="show-menu">
                 <ul class="main-menu">
                     <li>
-                        <a class="show-1 active homebutton" href="#"><i class="fa fa-home"></i>Home</a>
+                        <a class="show-1 active homebutton" href="#"><i class="fa fa-home"></i></a>
                     </li>
                     <li>
-                        <a class="show-2 aboutbutton" href="#"><i class="fa fa-user"></i>About Us</a>
+                        <a class="show-2 mapabutton" href="#"><i class="fa fa-map-marked-alt"></i>Mapa de Comercios de Competencia</a>
                     </li>
                     <li>
-                        <a class="show-3 projectbutton" href="#"><i class="fa fa-camera"></i>Gallery</a>
+                        <a class="show-3 projectbutton" href="#"><i class="fa fa-chart-line"></i>Fórmulas de Predicción</a>
                     </li>
                     <li>
-                        <a class="show-5 contactbutton" href="#"><i class="fa fa-envelope"></i>Contact</a>
+                        <a class="show-5 contactbutton" href="#"><i class="fa fa-folder"></i>Documentos y Multimedia</a>
                     </li>
                 </ul>
             </div>
@@ -81,166 +79,96 @@
                     <div id="menu-container">
                         
                         <div class="logo-holder logo-top-margin">
-                            <a href="#" class="site-brand"><img src="platform_resources/images/logo.png" alt=""></a>
+                            <a href="#" class="site-brand"><img src="./assets/img/logo.png" alt="">   OPTISERV</a>
                         </div>
                         
                         
                         <div id="menu-1" class="homepage home-section text-center">
                             <div class="welcome-text">
-                                <h2>Hello, Welcome to <strong>RECTANGLE</strong></h2>
-                                <p>Rectangle is free mobile template brought to you by <span class="orange">template</span><span class="green">mo</span>.com website. You can download, edit and use this layout for any purpose. Please tell your friends about our website. Thank you.</p>
-                                <form action="#" method="get" class="subscribe-form">
+                                <h2>¡Hola, Bienvenido a la plataforma del <strong>Laboratorio de Optimización de Servicios</strong>!</h2>
+                                <p>Puedes elegir una de las herramientas mostradas en el menú de la derecha para empezar a utilizarla.</p>
+                                <div class="subscribe-form">
                                     <div class="row">
+                                            <p class="subscribe-text">¡Envíanos tus dudas o sugerencias!</p>
                                         <fieldset class="col-md-offset-2 col-md-6">
-                                            <input name="subscribe-email" type="email" class="email" id="subscribe-email" placeholder="Write your email here..">
+                                            <input name="dudas" type="textarea" class="dudas" id="dudas" placeholder="* Dudas o Sugerencias">
+                                            <div>
+                                                <input name="nombre" type="text" class="nombre col-md-6 col-sm-12" id="nombre" placeholder="Nombre o Pseudónimo">
+                                                <input name="email" type="email" class="email col-md-6 col-sm-12" id="email" placeholder="* Correo">
+                                            </div>
+                                            <div>
+                                                <input name="empresa" type="text" class="empresa col-md-6 col-sm-12" id="empresa" placeholder="Empresa">
+                                                <input name="tel" type="text" class="tel col-md-6 col-sm-12" id="tel" placeholder="Teléfono Celular">
+                                            </div>
                                         </fieldset>
                                         <fieldset class="col-md-4 button-holder">
-                                            <input name="submit" type="submit" class="button default" id="submit" value="Submit">
+                                            <input name="submit" type="submit" class="button default" id="dudasSubmit" value="Enviar">
                                         </fieldset>
                                     </div>
-                                    <p class="subscribe-text">Please subscribe your email for latest updates!</p>
-                                </form>
+                                    <p class="subscribe-text">*Campos Obligatorios</p>
+                                </div>
                             </div>
                         </div>
 
                         <div id="menu-2" class="content about-section">
-                            <div class="row">
-                                <div class="col-md-8 col-sm-8">
-                                    <div class="box-content profile">
-                                        <h3 class="widget-title">Learn about us</h3>
-                                        <div class="profile-thumb">
-                                            <img src="platform_resources/images/8.jpg" alt="">
-                                        </div>
-                                        <div class="profile-content">
-                                            <h5 class="profile-name">Linda Beauty</h5>
-                                            <span class="profile-role">Creative Director</span>
-                                            <p>Most of the images are from <a rel="nofollow" href="http://unsplash.com">Unsplash.com</a> website. Curabitur auctor justo pretium purus varius sagittis. Aliquam porttitor leo sapien, hendrerit dapibus lorem.<br><br>
-											Change icons by <a rel="nofollow" href="http://fontawesome.info/font-awesome-icon-world-map/">Font Awesome</a> (version 4). Example: <span class="blue">&lt;i class=&quot;fa fa-refresh&quot;&gt;&lt;/i&gt;</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4">
-                                    <div class="box-content">
-                                        <h3 class="widget-title">Background</h3>
-                                        <p>Vestibulum pellentesque ante sit amet tristique hendrerit. Sed consequat, nunc lobortis faucibus pretium, enim nibh blandit est, nec sollicitudin est quam a neque. Aenean eget malesuada justo.</p>
-                                        <div class="about-social">
-                                            <ul>
-                                                <li><a href="#" class="fa fa-facebook"></a></li>
-                                                <li><a href="#" class="fa fa-twitter"></a></li>
-                                                <li><a href="#" class="fa fa-linkedin"></a></li>
-                                                <li><a href="#" class="fa fa-dribbble"></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-5 col-sm-5">
-                                    <div class="box-content">
-                                        <h3 class="widget-title">Our Studio</h3>
-                                        <div class="project-item">
-                                            <img src="platform_resources/images/7.jpg" alt="">
-                                            <div class="project-hover">
-                                                <h4>Great Nature Capture</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-7 col-sm-7">
-                                    <div class="box-content">
-                                        <h3 class="widget-title">Our Technical Skills</h3>
-                                        <ul class="progess-bars">
-                                            <li>
-                                                <span>HTML CSS 80%</span>
-                                                <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <span>PHOTOSHOP 95%</span>
-                                                <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <span>WORDPRESS 70%</span>
-                                                <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <span>PHP mySQL 50%</span>
-                                                <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                                <iframe id="mapa_locaciones_frame" src="https://dragonesoftware.com/Mapa_Locaciones/" ></iframe>
                         </div>
 
                         <div id="menu-3" class="content gallery-section">
                             <div class="box-content">
-                                <h3 class="widget-title">Past Projects</h3>
+                                <h3 class="widget-title">Fórmulas de Predicción</h3>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="project-item">
-                                            <img src="platform_resources/images/1.jpg" alt="">
+                                        <div class="project-item" style="background:blue;">
                                             <div class="project-hover">
                                                 <h4>Great Nature Capture</h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="project-item">
-                                            <img src="platform_resources/images/2.jpg" alt="">
+                                        <div class="project-item" style="background:green;">
                                             <div class="project-hover">
                                                 <h4>Another Image Caption</h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="project-item">
-                                            <img src="platform_resources/images/3.jpg" alt="">
+                                        <div class="project-item" style="background:red;">
                                             <div class="project-hover">
                                                 <h4>Great Nature Capture</h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="project-item">
-                                            <img src="platform_resources/images/4.jpg" alt="">
+                                        <div class="project-item" style="background:gray;">
                                             <div class="project-hover">
                                                 <h4>Another Image Caption</h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="project-item">
-                                            <img src="platform_resources/images/5.jpg" alt="">
+                                        <div class="project-item" style="background:orange;">
                                             <div class="project-hover">
                                                 <h4>Great Nature Capture</h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="project-item">
-                                            <img src="platform_resources/images/6.jpg" alt="">
+                                        <div class="project-item" style="background:yellow;">
                                             <div class="project-hover">
                                                 <h4>Another Image Caption</h4>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="project-pages">
+                               <!-- <div class="project-pages">
                                     <ul>
                                         <li><a href="#">1</a></li>
                                         <li><a href="#">2</a></li>
                                         <li><a href="#">3</a></li>
                                         <li><a href="#">...</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
 
@@ -298,13 +226,13 @@
                                 <a class="show-1 active homebutton" href="#"><i class="fa fa-home"></i>Home</a>
                             </li>
                             <li>
-                                <a class="show-2 aboutbutton" href="#"><i class="fa fa-user"></i>About Us</a>
+                                <a class="show-2 mapabutton" href="#"><i class="fa fa-map-marked-alt"></i>Mapa de Comercios Competidores</a>
                             </li>
                             <li>
-                                <a class="show-3 projectbutton" href="#"><i class="fa fa-camera"></i>Gallery</a>
+                                <a class="show-3 projectbutton" href="#"><i class="fa fa-chart-line"></i>Fórmulas de Predicción</a>
                             </li>
                             <li>
-                                <a class="show-5 contactbutton" href="#"><i class="fa fa-envelope"></i>Contact</a>
+                                <a class="show-5 contactbutton" href="#"><i class="fa fa-folder"></i>Documentos y Multimedia</a>
                             </li>
                         </ul>
                     </nav>
@@ -312,6 +240,20 @@
                 </div>
             </div>
         </div>
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+            <div>
+                <input name="username" type="text" class="username col-md-6 col-sm-12" id="username" placeholder="Nombre de Usuario">
+                <input name="password" type="password" class="password col-md-6 col-sm-12" id="password" placeholder="Contraseña">
+            </div>
+        </div>
+        </div>
+        
 
         <!-- SITE-FOOTER -->
         <div class="site-footer">
@@ -319,7 +261,92 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <p>
-                        	Copyright &copy; 2084 Company Name
+                            Copyright &copy; 2084 Company Name 
+                        </p>
+                            <!-- Trigger/Open The Modal -->
+                            <button lang="es" id="myBtn">Iniciar Sesión</button>
+                    </div>
+
+                            <script>
+                            // Get the modal
+                            var modal = document.getElementById('myModal');
+
+                            // Get the button that opens the modal
+                            var btn = document.getElementById("myBtn");
+
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close")[0];
+
+                            // When the user clicks the button, open the modal 
+                            btn.onclick = function() {
+                            modal.style.display = "block";
+                            }
+
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                            modal.style.display = "none";
+                            }
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                            }
+                            </script>
+                            <style>
+                            /* The Modal (background) */
+                            .modal {
+                            display: none; /* Hidden by default */
+                            position: fixed; /* Stay in place */
+                            z-index: 99; /* Sit on top */
+                            padding-top: 100px; /* Location of the box */
+                            left: 0;
+                            top: 0;
+                            width: 100%; /* Full width */
+                            height: 100%; /* Full height */
+                            overflow: auto; /* Enable scroll if needed */
+                            background-color: rgb(0,0,0); /* Fallback color */
+                            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                            }
+
+                            /* Modal Content */
+                            .modal-content {
+                            background-color: #fefefe;
+                            margin: auto;
+                            padding: 20px;
+                            border: 1px solid #888;
+                            width: 80%;
+                            }
+
+                            /* The Close Button */
+                            .close {
+                            color: #aaaaaa;
+                            float: right;
+                            font-size: 28px;
+                            font-weight: bold;
+                            }
+
+                            .close:hover,
+                            .close:focus {
+                            color: #000;
+                            text-decoration: none;
+                            cursor: pointer;
+                            }
+                            .modal-content p{
+                                color:black;
+                            }
+                            button#myBtn {
+                                background: #061b36;
+                                border: 2px solid #071427;
+                                border-radius: 10px;
+                                letter-spacing: 2px;
+                            }
+                            button#myBtn:hover {
+                                background: #375377;
+                                border: 2px solid #1c3150;
+                            }
+                            </style>
                         
                     <!-- | Design: <a href="http://www.templatemo.com" target="_parent"><span class="green">free templates</span></a> -->
                         </p>
@@ -327,10 +354,18 @@
                 </div>
             </div>
         </div> <!-- .site-footer -->
-
-        <script src="platform_resources/js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="./assets/js/jquery-3.2.0.min.js"></script>
         <script src="platform_resources/js/plugins.js"></script>
         <script src="platform_resources/js/main.js"></script>
+
+        <script src="platform_resources/js/home.js"></script>
+        <script src="platform_resources/js/login.js"></script>
+        <script src="platform_resources/js/documents.js"></script>
+        
+        <script> 
+        /*-------- SCRIPTS PARA AGREGAR LOS HTMLS APARTE CON JQUERY ---------*/
+            
+        </script> 
 		<!-- templatemo 439 rectangle -->
     </body>
 </html>

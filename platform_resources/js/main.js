@@ -17,12 +17,14 @@
 	$(".main-menu a.homebutton").click(function(){
 		$("#menu-container .content").slideUp('slow');
 		$("#menu-container .homepage").slideDown('slow');
-		$(".logo-top-margin").animate({marginLeft:'45%'}, "slow");
+		$(".logo-top-margin").animate({marginLeft:'3%'}, "fast");
+		$(".logo-top-margin").animate({marginLeft:'-2%'}, "fast");
+		$(".logo-top-margin").animate({marginLeft:'0%'}, "fast");
 		$(".logo-top-margin").animate({marginTop:'120px'}, "slow");
 		return false;
 	});
 
-	$(".main-menu a.aboutbutton").click(function(){
+	$(".main-menu a.mapabutton").click(function(){
 		$("#menu-container .content").slideUp('slow');
 		$("#menu-container .about-section").slideDown('slow');
 		$(".logo-top-margin").animate({marginTop:'0'}, "slow");

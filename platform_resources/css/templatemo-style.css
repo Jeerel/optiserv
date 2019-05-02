@@ -378,20 +378,37 @@ h1, h2, h3, h4, h5 {
   top: 0;
   left: 0;
   z-index: 1;
-  background: rgba(45, 2, 78, 0.28);
+  background: rgba(1, 4, 21, 0.85);
 }
 
 #page-content {
   position: relative;
   z-index: 12;
-  margin-top: 60px;
+  margin-top: 30px;
+  width: 90% !important;
 }
 @media screen and (max-width: 992px) {
   #page-content {
     margin-top: 0;
   }
 }
+.logo-top-margin img {
+  width: 60px;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
 
+.logo-top-margin a.site-brand {
+  display: block;
+  position: relative;
+  height: 60px;
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 85px;
+  color: white;
+  letter-spacing: 4px;
+}
 .content {
   display: none;
 }
@@ -428,7 +445,7 @@ h1, h2, h3, h4, h5 {
 .subscribe-form {
   margin-top: 80px;
 }
-.subscribe-form input.email {
+.subscribe-form input.dudas {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
@@ -512,6 +529,8 @@ h1, h2, h3, h4, h5 {
   transition:0.5s;
   color: white;
   font-size: 30px;
+  bottom: 9px;
+  position: relative;
 }
 .back-icons a {
   padding: 10px 40px 10px 40px;
@@ -571,7 +590,7 @@ h1, h2, h3, h4, h5 {
   background: #207d59;
 }
 
-.aboutbutton {
+.mapabutton {
   background: #3b5b8e;
 }
 
@@ -585,9 +604,10 @@ h1, h2, h3, h4, h5 {
 
 .logo-top-margin {
   position: relative;
-  margin-top: 120px;
-  margin-left: 45%;
+  text-align: center;
+  margin-top:120px;
 }
+
 @media screen and (max-width: 992px) {
   .logo-top-margin {
     margin-top: 0!important;
@@ -809,12 +829,94 @@ h1, h2, h3, h4, h5 {
   position: relative;
   z-index: 11;
   padding: 14px 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: #343a40;
   margin-top: 30px;
 }
 .site-footer a {
-  color: #5cb48e;
+  color: #8692f7;
 }
 
 
 /* Custom */
+
+#mapa_locaciones_frame{
+  width:100%;
+  height:550px;
+}
+#nav li {
+  background: #c1c1c12e;
+  width: 160px;
+  height: 160px;
+  padding-top: 10px;
+}
+
+#nav a {
+  height: 140px;
+  width: 140px;
+  font-size: 14px;
+  background: #354267;
+  vertical-align: text-bottom;
+}
+
+#nav i {
+  font-size: 36px;
+  margin-bottom: 0px;
+  height: 50%;
+  padding: 0;
+  line-height: 100px;
+}
+
+#nav li .active {
+  background: #0f131f69;
+  color: #a1a4a5;
+}
+
+iframe#mapa_locaciones_frame {
+  position: relative;
+  display: block;
+  border: 11px solid white;
+  border-radius: 20px;
+}
+.subscribe-form input.dudas {
+  height:70px;
+}
+.subscribe-form input.nombre {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: 0;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 14px;
+}
+.subscribe-form input.email {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: 0;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 14px;
+}
+.subscribe-form input.empresa {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: 0;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 14px;
+}
+.subscribe-form input.tel {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: 0;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 14px;
+}
