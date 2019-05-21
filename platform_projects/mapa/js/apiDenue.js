@@ -25,7 +25,8 @@ var vecNombres = [
 'Latitud:',
 'Longitud:'];
 
-
+var gLatLon //origen rutas
+var gDest //destino rutas
 
 function llamarApiDenueBus(){
 
@@ -50,7 +51,9 @@ function geocodeAddress(geocoder, resultsMap) {
 			resultsMap.setCenter(results[0].geometry.location);
 		
 	    var latitud=results[0].geometry.location.lat();
-	    var longitud=results[0].geometry.location.lng();
+			var longitud=results[0].geometry.location.lng();
+			
+			gLatLon = new google.maps.LatLng(latitud,longitud); 
 
 		urlApiBusquedaTmp = urlApiBusqueda.replace('#latitud',latitud);
 		urlApiBusquedaTmp = urlApiBusquedaTmp.replace('#longitud',longitud);
@@ -96,10 +99,12 @@ function locationsINEGI(){
 			
 			markers.push(marker);
 
+			
+
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
 					infowindow.setContent(locations[i][0]+" <br />" +
-																locations[i][3]);	
+																locations[i][3]+"<br/> <button onclick='crearRuta("+locations[i][1]+","+locations[i][2]+")'>ver ruta</button>");	
           infowindow.open(map, marker);
         }
       })(marker, i));
@@ -108,8 +113,42 @@ function locationsINEGI(){
 	});	
 	return;
 }
+var ds;
+var dr;
+//Rutas
+function crearRuta(lati,loti){
 
-function pintaMapa(locations){
+	var objConfigDR = {
+		map: map,
+		suppressMarkers: true
+	}
 
+	var gDest = new google.maps.LatLng(parseFloat(lati),parseFloat(loti))
+
+	var objConfigDS = {
+		origin: gLatLon,
+		destination: gDest,
+		travelMode: google.maps.TravelMode.DRIVING 
+	}
+
+	if(dr!=null){
+		dr.setMap(null);	
+	}
+		
+
+		ds= new google.maps.DirectionsService();
+		dr = new google.maps.DirectionsRenderer(objConfigDR);
+			ds.route(objConfigDS, fnRutear);
+						
+						function fnRutear( resultados, status){
+							//muestra la linea de origin y dest
+							if(status == 'OK'){
+								dr.setDirections(resultados);
+							}else{
+								alert('Error' + status);
+	
+							}
+						}
 	
 }
+
